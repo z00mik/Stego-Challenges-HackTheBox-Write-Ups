@@ -26,7 +26,9 @@ So using this website https://www.dcode.fr/binary-image to convert binary to tex
 
 <img src="images/dcode-image.png">
 
-Now we can download the image, we can see it's a QR so we'll read it, I will use https://online-barcode-reader.inliteresearch.com.
+We can apreciate that it's a QR and the 0's was black pixels and the 1's was white pixels.
+
+So we'll read it, I will use https://online-barcode-reader.inliteresearch.com.
 
 And finally we got the flag
 
