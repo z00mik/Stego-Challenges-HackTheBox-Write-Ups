@@ -26,7 +26,7 @@ So using this website https://www.dcode.fr/binary-image to convert binary to tex
 
 <img src="images/dcode-image.png">
 
-We can apreciate that it's a QR and the 0's was black pixels and the 1's was white pixels.
+We can apreciate that it's a QR and the 0's were black pixels and the 1's were white pixels.
 
 So we'll read it, I will use https://online-barcode-reader.inliteresearch.com.
 
