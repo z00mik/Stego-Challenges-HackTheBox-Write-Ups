@@ -22,6 +22,12 @@ Let's try to convert it to ASCII.
 Well, it seems this is a dead end...
 
 Let's try to read again the challenge... I saw some clues, the title itself ```Digital Cube``` and ```TIME ELAPSED: 50:50```, so.. a cube and 50:50, it seems like a ratio, 50x50px.
-So using this website https://www.dcode.fr/binary-image and setting 50 as width I got this image:
+So using this website https://www.dcode.fr/binary-image to convert binary to text, setting 50 as width I got this image:
 
 <img src="images/dcode-image.png">
+
+Now we can download the image, we can see it's a QR so we'll read it, I will use https://online-barcode-reader.inliteresearch.com.
+
+And finally we got the flag
+
+<img src="images/flag.png">
