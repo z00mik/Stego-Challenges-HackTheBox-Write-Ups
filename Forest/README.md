@@ -25,7 +25,7 @@ gur sberfg. Gerrf ner na vzcbegnag pbzcbarag bs gur raivebazrag. Gurl pyrna gur 
 ng avtug, naq npg nf rkpryyrag fbhaq nofbeoref. UGO{NzNm1aTfXvyYmMOe0}
 ```
 
-We can see ```UGO{NzNm1aTfXvyYmMOe0}```` we can figure out that this text is encrypted so analyzing the firsts letters of the encrypted flag ```UGO``` is ```HTB``` so there are 13 more characters in each position in the ASCII table.
+We can see ```UGO{NzNm1aTfXvyYmMOe0}``` we can figure out that this text is encrypted so analyzing the firsts letters of the encrypted flag ```UGO``` is ```HTB``` so there are 13 more characters in each position in the ASCII table.
 So we can deduce that it's the ROT13 encoding (Caesar cypher), using a decrypter online we got the flag.
 
 ```
