@@ -166,6 +166,12 @@ H[U$Lr265Sn
 
 Nothing relevant till now...
 
-Using Stegsolve, we can use the [online tool](https://www.dcode.fr/braille-alphabet)
+Using Stegsolve, we can use  the [online tool](https://stegonline.georgeom.net/image)
+
+With Red Plane 0, I found:
+
+<img src="images/bitplane.png">
+
+To decode this braile I'll use [braile tool](https://www.dcode.fr/braille-alphabet)
 
 So there's the flag, remember to put it in lowercase.
