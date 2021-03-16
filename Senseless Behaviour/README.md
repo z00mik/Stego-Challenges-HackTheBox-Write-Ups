@@ -167,3 +167,5 @@ H[U$Lr265Sn
 Nothing relevant till now...
 
 Using Stegsolve, we can use the [online tool](https://www.dcode.fr/braille-alphabet)
+
+So there's the flag, remember to put it in lowercase.
