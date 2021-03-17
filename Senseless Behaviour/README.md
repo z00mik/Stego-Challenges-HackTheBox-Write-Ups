@@ -2,6 +2,8 @@
 
 <img src="images/hackthebox.png">
 
+Let's check the file
+
 ```bash
 └─# file meow.wav 
 meow.wav: RIFF (little-endian) data, WAVE audio, Microsoft PCM, 16 bit, stereo 44100 Hz
