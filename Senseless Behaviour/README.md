@@ -52,7 +52,7 @@ Let's chech the wave file with audacity:
 
 Well, we got nothing relevant here again.
 
-Let's try with some bruteforce trying to get some file from the wav using ```steghide```.
+Let's try with some bruteforce trying to get some file from the wav using ```steghide``` to extract the files.
 I'll use this [Steghide Brute Force Tool](https://github.com/Va5c0/Steghide-Brute-Force-Tool) cuz we have no password so'll brute force it.
 
 ```bash
@@ -65,6 +65,17 @@ $ python steg_brute.py -b -d rockyou.txt -f meow.wav
  
  wrote extracted data to "youfoundme".
  ```
+ 
+ Another way is to use this [tool](https://github.com/RickdeJager/stegseek) which is faster and maybe the fastest tool.
+ ```
+ ```
+ 
+ And then use ```steghide``` with the pass to extract the files:
+ 
+ ```
+ ```
+ 
+ 
  
  ```bash
  └─# file youfoundme
