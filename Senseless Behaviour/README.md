@@ -70,15 +70,20 @@ $ python steg_brute.py -b -d rockyou.txt -f meow.wav
  
  Another way is to use this [tool](https://github.com/RickdeJager/stegseek) which is faster and maybe the fastest tool.
  ```
+ └─# stegseek meow.wav /usr/share/wordlists/rockyou.txt
+StegSeek version 0.5
+Progress: 75.00% (104944702 bytes)           
+
+[i] --> Found passphrase: "skittles"
+[i] Original filename: "youfoundme"
+[i] Extracting to "meow.wav.out"
  ```
  
- And then use ```steghide``` with the pass to extract the files:
- 
- ```
- ```
- 
- 
- 
+If u choose the second method the filename extracted will be named as "meaw.wav.out"
+
+#
+
+Cheking the file we discover that it's a text.
  ```bash
  └─# file youfoundme
 youfoundme: ASCII text
