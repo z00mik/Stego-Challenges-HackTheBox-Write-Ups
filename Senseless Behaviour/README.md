@@ -2,6 +2,8 @@
 
 <img src="images/hackthebox.png">
 
+Let's check the file
+
 ```bash
 └─# file meow.wav 
 meow.wav: RIFF (little-endian) data, WAVE audio, Microsoft PCM, 16 bit, stereo 44100 Hz
@@ -52,7 +54,7 @@ Let's chech the wave file with audacity:
 
 Well, we got nothing relevant here again.
 
-Let's try with some bruteforce trying to get some file from the wav using ```steghide```.
+Let's try with some bruteforce trying to get some file from the wav using ```steghide``` to extract the files.
 I'll use this [Steghide Brute Force Tool](https://github.com/Va5c0/Steghide-Brute-Force-Tool) cuz we have no password so'll brute force it.
 
 ```bash
@@ -66,6 +68,22 @@ $ python steg_brute.py -b -d rockyou.txt -f meow.wav
  wrote extracted data to "youfoundme".
  ```
  
+ Another way is to use this [tool](https://github.com/RickdeJager/stegseek) which is faster and maybe the fastest tool.
+ ```
+ └─# stegseek meow.wav /usr/share/wordlists/rockyou.txt
+StegSeek version 0.5
+Progress: 75.00% (104944702 bytes)           
+
+[i] --> Found passphrase: "skittles"
+[i] Original filename: "youfoundme"
+[i] Extracting to "meow.wav.out"
+ ```
+ 
+If u choose the second method the filename extracted will be named as "meaw.wav.out"
+
+#
+
+Cheking the file we discover that it's a text.
  ```bash
  └─# file youfoundme
 youfoundme: ASCII text
