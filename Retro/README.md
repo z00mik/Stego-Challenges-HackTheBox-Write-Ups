@@ -4,7 +4,7 @@
 
 First of all, extract the data and check the file's info.
 
-```
+```bash
 └─# file retro.jpg
 retro.jpg: JPEG image data, Exif Standard: [TIFF image data, big-endian, direntries=2], baseline, precision 8, 1920x1080, components 3
 ```
@@ -12,7 +12,7 @@ Nothing interesting here.
 
 Now let's try binwalk
 
-```
+```bash
 └─# binwalk retro.jpg
 
 DECIMAL       HEXADECIMAL     DESCRIPTION
@@ -27,7 +27,7 @@ We can see there's a zip file inside of retro.jpg which contains 2 files: ```eig
 
 So let's extract them, we can use binwalk again with the option ```-e```
 
-```
+```bash
 └─# binwalk -e retro.jpg    
 
 DECIMAL       HEXADECIMAL     DESCRIPTION
