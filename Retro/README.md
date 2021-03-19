@@ -76,7 +76,7 @@ After doing some research about those sounds and thinking it could be a tecnolog
 I found this could be a similar sound when loading programs into Atari. so it must be an Atari program converted to wav.
 Knowing this I found a program [MakeTZX](http://ramsoft.bbk.org.omegahg.com/maketzx.html) with converts .wav to .tzx.
 
-````bash
+```bash
 └─# ./maketzx retro.wav flag.tzx
 
 -=[ MakeTZX v2.31 ]=- (C) 1998-2001 RAMSOFT, a ZX Spectrum demogroup.
