@@ -62,7 +62,7 @@ After that we have to extract anyway with ```unzip```
 
 Opening the file ```eighties_were_nice.txt```
 
-```
+```bash
 └─# cat eighties_were_nice.txt
 Retro style is nice! I hope you can find the "flag" as we usually did in the eighties
 
