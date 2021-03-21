@@ -2,6 +2,10 @@
 
 <img src="images/hackthebox.png">
 
+This is the image:
+
+<img src="image/massacre.png">
+
 This is one of the two most difficult challenges for stego on this website and with good reason.
 
 For this challenge we will have to use a python script in my case.
