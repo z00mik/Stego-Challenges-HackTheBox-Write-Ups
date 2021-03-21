@@ -4,7 +4,7 @@
 
 This is the image:
 
-<img src="image/massacre.png">
+<img align="center" src="image/massacre.png">
 
 This is one of the two most difficult challenges for stego on this website and with good reason.
 
