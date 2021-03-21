@@ -11,7 +11,8 @@ This is one of the two most difficult challenges for stego on this website and w
 For this challenge we will have to use a python script in my case.
 
 After doing a long long research, I realized that some subpixels of each pixel (RGB value) doesn't end with 0, so ...
-The script skips the no relevant rgb values:
+
+**1. The script skips the no relevant rgb values:**
 
 ```python
 for rgb in pixels:  # Skipping zero rgb's
@@ -19,14 +20,14 @@ for rgb in pixels:  # Skipping zero rgb's
                 nozero.append(rgb)
 ```
 
-Process just the octals which isn't end with 0:
+**2. Process just the octals which isn't end with 0:**
 
 ```python
 for i in nozero:
         if i[0] % 10 != 0 or i[1] % 10 != 0 or i[2] % 10 != 0:  # Some numbers don't end with 0, so we'll want it
 ```
 
-Then extract the LSB (least significant bit), generating a new RGB value, convert it to binary and finally gets the ASCII char represents by the binary number converted to decimal:
+**3. Then extract the LSB (least significant bit), generating a new RGB value, convert it to binary and finally gets the ASCII char represents by the binary number converted to decimal:**
 
 ```python
             r = '{:08b}'.format(i[R] % 10)[6:8] # Get the last 2 bits of the octal obtained by doing module 10, and convert them to binary
@@ -37,7 +38,7 @@ Then extract the LSB (least significant bit), generating a new RGB value, conver
             message = message + i   # Joins each char to a message
 ```
 
-Then only the flag is searched in the message formed by all the characters:
+**4. Then only the flag is searched in the message formed by all the characters:**
 
 ```python
 regex = re.compile("(HTB{.*})") # Creating the pattern to find the flag inside the message
