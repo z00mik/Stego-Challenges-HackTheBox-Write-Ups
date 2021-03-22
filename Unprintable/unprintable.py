@@ -23,25 +23,26 @@ def get_replace(binary_values,bs,next=False):
 
 def generate_binary_string():
     try:
-        img = Image.open("Unprintable.png")
+        img = Image.open("Unprintable.png") # Open the img
     except:
         print('Put Unprintable.png file on this directory')
         exit(1)
 
-    pixels = img.convert('RGB')
+    pixels = img.convert('RGB') #Convert it in RGB
 
-    width, height = img.size
+    width, height = img.size    #Getting the img's dimension
 
     binary_string = ""
 
+    # Loop every 10 pixels
     for y in range(0, height, 10):
         for x in range(0, width, 10):
 
             r, g, b = pixels.getpixel((x, y))
 
-            if r == g == b == 0:
+            if r == g == b == 0:    #If the pixel is 0 = black = 0
                 binary_string += "0"
-            elif r == g == b == 255:
+            elif r == g == b == 255:    #If the pixel is 255 = white = 1
                 binary_string += "1"
 
     return binary_string
