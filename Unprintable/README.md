@@ -79,17 +79,13 @@ I'll show you the raw output from convert each byte into a ASCII char:
 -[7->+<]>-.\x88[3\x83+\x86>-.[5\x83+\x86>2-.4\x80\x832+\x86\x8.\x80\x8e5+\x90>+.\x802\x8e+\x86\x88.[5\x83+\x90>3-.3+.2+..
 ```
 
-The problem is that ```\x88``` or ```\x86```, so searching in internet, this [post](https://buer.haus/2018/04/24/montecrypto-argss-write-up/#h.676eiyh9vkrr) gaves me the solution,
+The problem is that ```\x88``` or ```\x86```, so searching in internet, this [post](https://buer.haus/2018/04/24/montecrypto-argss-write-up/#h.676eiyh9vkrr) gaves me the solution.
 It's RLE enconded brainfuck and the bytes in between are compression, so to decompress we have to take the byte, ```\x88``` and get the 8º char of the string with the next char to replace it so the result would be
 ```>-```.
 
 There's another case, another byte we don't want is ```+1```, so if ```\x9e``` would decode to ```\x88``` and ```\x88 +1``` it only decodes to ```\x88``` wich would be again ```>-```.
 
-**So the correct output is like:**
-
-```
--[7->+<]>-.>-[3->+<]>-.[5->+<]>2-.4-[->2+<]>-.-[->5+<]>+.-[2->+<]>-.[5->+<]>3-.3+.2+.>-[5->+<]>.2-[3->2+<]>3...
-```
+To resolve them, you take the byte at ```string[index]``` and ```string[index+1]```, then replace the unprintable byte with those two characters.
 
 The func:
 
@@ -134,6 +130,14 @@ def decode_binary(binary_string):
     print("\033[94m" + "The raw decoded string is:\n" + '\033[1;37;0m' + raw_str )
     return decoded_str
 ```
+
+
+**So the correct output is like:**
+
+```
+-[7->+<]>-.>-[3->+<]>-.[5->+<]>2-.4-[->2+<]>-.-[->5+<]>+.-[2->+<]>-.[5->+<]>3-.3+.2+.>-[5->+<]>.2-[3->2+<]>3...
+```
+
 
 # 3. RLE Decode (Run Length Encoding Decode)
 
