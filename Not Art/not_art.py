@@ -17,7 +17,7 @@ def number(value):
 
     return result
 
-pixels = img.convert('RGB') #Convert it in RGB
+pixelsels = img.convert('RGB') #Convert it in RGB
 width, height = img.size    #Getting the img's dimension
 
 dic = {'0':0, '192':1, '255':2}
@@ -26,7 +26,7 @@ ans = []
 
 for y in range(0, height,10):
     for x in range(0, width,10):
-        r, g, b = pixels.getpixel((x, y))
+        r, g, b = pixelsels.getpixelsel((x, y))
         if r or g or b != 0:
             x = number(r)
             y = number(g)
@@ -36,7 +36,7 @@ for y in range(0, height,10):
             ans.append(chr(97+((xyz_10+12)%26)))
 """
 #-----------#
-pix = img.load()
+pixels = img.load()
 
 arr = []
 ans = []
@@ -46,19 +46,19 @@ last = 29
 
 while first*10+5 < 135:
     for i in range(first, last+1):
-        arr.append(pix[i*10+5,first*10+5])
+        arr.append(pixels[i*10+5,first*10+5])
     for i in range(first+1, last+1):
-        arr.append(pix[last*10+5,i*10+5])
+        arr.append(pixels[last*10+5,i*10+5])
     for i in reversed(range(first, last)):
-        arr.append(pix[i*10+5,last*10+5])
+        arr.append(pixels[i*10+5,last*10+5])
     for i in reversed(range(first+2, last)):
-        arr.append(pix[first*10+5,i*10+5])
-    arr.append(pix[(first+1)*10+5,(first+2)*10+5])
+        arr.append(pixels[first*10+5,i*10+5])
+    arr.append(pixels[(first+1)*10+5,(first+2)*10+5])
     first += 2
     last -= 2
-arr.append(pix[145,145])
-arr.append(pix[155,145])
-arr.append(pix[155,155])
+arr.append(pixels[145,145])
+arr.append(pixels[155,145])
+arr.append(pixels[155,155])
 
 for i in range(len(arr)):
     temp = 0
