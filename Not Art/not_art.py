@@ -5,7 +5,7 @@ img_name = 'not_art.png'
 try:
     img = Image.open(img_name)   # Return an Image object
 except:
-    print ('Put massacre.png file on this directory')
+    print ('Put not_art.png file on this directory')
     exit(1)
 
 """
